@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plan your next trip with a quick look at the weather for popular vacation destinations." />
+  <title>Vacation Weather Planner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">Vacation Weather Planner</h1>
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Toggle Menu">☰</button>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="popular.html">Popular Destinations</a></li>
+          <li class="nav__item"><a class="nav__link" href="weather.html">Weather</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h2 class="hero__title">Plan Your Next Getaway</h2>
+      <!-- replace this image with a real travel/vacation banner in your images folder -->
+      <img src="images/vacation-banner.jpg" alt="Collage of popular travel destinations" class="hero__img">
+      <p class="hero__text">
+        Check the forecast for top travel spots like Paris, New York, Tokyo, London, and more before you commit to a trip.
+        Use this site to explore popular destinations and make sure the weather matches your vacation plans.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Vacation Weather Planner | Built by our team</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.nav__toggle');
+    const navList = document.querySelector('.nav__list');
+
+    toggleButton.addEventListener('click', () => {
+      navList.classList.toggle('nav__list--active');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse popular vacation destinations and check the weather before you commit to a trip." />
+  <title>Popular Destinations</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <!-- You can change this title to match your weather project name if needed -->
+      <h1 class="header__title">Vacation Weather Planner</h1>
+      <nav class="nav">
+       
+        <ul class="nav__list">
+          <!-- Update these links to match your real pages -->
+          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="popular.html">Popular Destinations</a></li>
+          <li class="nav__item"><a class="nav__link" href="weather.html">Weather</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="destinations">
+      <h2 class="destinations__title">Top 10 Popular Destinations</h2>
+      <p class="destinations__blurb">
+        From busy city breaks to tropical getaways, these are some of the most popular places to visit.
+        Before you commit to a trip, make sure to check the weather so the forecast matches your vacation plans.
+      </p>
+      <a href="weather.html" class="destinations__cta">
+         Check the Weather Before You Book
+      </a>
+
+      <div class="destinations__grid">
+
+        <div class="destination-card">
+          <img src="images/paris.jpg" alt="View of Paris with the Eiffel Tower" class="destination-card__img">
+          <h3 class="destination-card__name">Paris</h3>
+          <p class="destination-card__desc">Cozy cafés, romantic streets, and classic landmarks in the heart of France.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/new-york.jpg" alt="Skyline of New York City" class="destination-card__img">
+          <h3 class="destination-card__name">New York City</h3>
+          <p class="destination-card__desc">Skyscrapers, bright lights, and endless energy in the city that never sleeps.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/tokyo.jpg" alt="Tokyo city lights at night" class="destination-card__img">
+          <h3 class="destination-card__name">Tokyo</h3>
+          <p class="destination-card__desc">A mix of neon streets, quiet shrines, and amazing food everywhere you look.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/london.jpg" alt="London skyline with Big Ben" class="destination-card__img">
+          <h3 class="destination-card__name">London</h3>
+          <p class="destination-card__desc">Historic sights, rainy days, and cozy walks along the river.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/las-vegas.jpg" alt="Las Vegas strip at night" class="destination-card__img">
+          <h3 class="destination-card__name">Las Vegas</h3>
+          <p class="destination-card__desc">Bright lights, big shows, and desert heat all in one place.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/mexico.jpg" alt="Beach in Mexico with blue water" class="destination-card__img">
+          <h3 class="destination-card__name">Mexico</h3>
+          <p class="destination-card__desc">Colorful streets, warm beaches, and rich culture across the country.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/italy.jpg" alt="Coastal view in Italy" class="destination-card__img">
+          <h3 class="destination-card__name">Italy</h3>
+          <p class="destination-card__desc">Pasta, art, and scenic views from the countryside to the coast.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/rome.jpg" alt="The Colosseum in Rome" class="destination-card__img">
+          <h3 class="destination-card__name">Rome</h3>
+          <p class="destination-card__desc">Ancient ruins, cobblestone streets, and late-night gelato walks.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/bangkok.jpg" alt="City view of Bangkok at sunset" class="destination-card__img">
+          <h3 class="destination-card__name">Bangkok</h3>
+          <p class="destination-card__desc">Street food, busy markets, and ornate temples in the middle of the city.</p>
+        </div>
+
+        <div class="destination-card">
+          <img src="images/hawaii.jpg" alt="Beach and palm trees in Hawaii" class="destination-card__img">
+          <h3 class="destination-card__name">Hawaii</h3>
+          <p class="destination-card__desc">Tropical beaches, volcanoes, and laid-back island vibes.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2025 Vacation Weather Planner | Popular Destinations</p>
+  </footer>
+
+  <script>
+    const toggleButton = document.querySelector('.nav__toggle');
+    const navList = document.querySelector('.nav__list');
+
+    toggleButton.addEventListener('click', () => {
+      navList.classList.toggle('nav__list--active');
+    });
+  </script>
+</body>
+</html>

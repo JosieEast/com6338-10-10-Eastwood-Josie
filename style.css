@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  background-color: #fefdf9;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #a690daa8;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.destinations {
+  background-color: #9c8fbba8;
+  padding: 2rem;
+  text-align: center;
+}
+
+.destinations__title {
+  font-size: 3rem;
+  font-family: 'Josefin Slab', serif;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.destinations__blurb {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  font-size:1.3rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* CTA button under blurb */
+.destinations__cta {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #8e39d3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.destinations__cta:hover {
+  background-color: #c72d39;
+}
+
+.destinations__grid {
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.destination-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-card__img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.destination-card__name {
+  font-size: 1.4rem;
+  color: #432ff7;
+  margin-top: 0.5rem;
+}
+
+.destination-card__desc {
+  font-size:1rem;
+  color: #555;
+}
+/* Make main take remaining space so footer sticks at bottom */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+/* Footer */
+.footer {
+  background-color: #a690daa8;
+  padding: 1rem 2rem;
+  text-align: center;
+
+}
+
+.footer__text {
+  color: #1d3557;
+}
+/* Make sure the page takes full height */
+html, body {
+  height: 100%;
+}
+
+/* Make main take remaining space so footer sticks at bottom */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Remove extra bottom margin in hero if any */
+.hero {
+  margin-bottom: 0;
+}
+.main {
+  flex: 1;
+  background-color: #75649cad;
+}
+/* Navigation */
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size:1.4rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #e63946;
+}
