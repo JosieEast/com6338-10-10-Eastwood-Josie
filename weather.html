@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Checker</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <header>
+    <h1>Weather Checker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Popular Destinations</a>
+      <a href="weather.html">Weather Checker</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="app">
+      <section class="card">
+        <h2>Search Destination</h2>
+        <form id="search-form">
+          <input id="city-input" placeholder="Enter city (e.g. Paris)" required />
+          <button type="submit" class="btn">Get Weather</button>
+        </form>
+
+        <p id="status" class="muted">Know before you go! Be sure to pack and plan accordingly.</p>
+
+        <div id="result"></div>
+      </section>
+      <aside class="card">
+        <h3>Recent Searches</h3>
+        <ul id="recent" class="recent-list"></ul>
+
+        <button id="clear-cache" class="small">Clear Searches</button>
+      </aside>
+    </div>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
