@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -26,15 +26,41 @@
   </header>
 
   <main class="main">
+
     <section class="hero">
       <h2 class="hero__title">Plan Your Next Getaway</h2>
-      <!-- replace this image with a real travel/vacation banner in your images folder -->
       <img src="images/vacation-banner.jpg" alt="Collage of popular travel destinations" class="hero__img">
       <p class="hero__text">
         Check the forecast for top travel spots like Paris, New York, Tokyo, London, and more before you commit to a trip.
         Use this site to explore popular destinations and make sure the weather matches your vacation plans.
       </p>
     </section>
+
+    <!-- HOMEPAGE SECTION -->
+    <section class="home-search">
+      <h2 class="home-search__title">Search for a Destination</h2>
+      <p class="home-search__text">
+        Start with a city or country you’re thinking about, then double-check the forecast before you book your trip.
+      </p>
+
+      <form id="destination-search" class="home-search__form">
+        <label class="home-search__label" for="search-input">Destination</label>
+        <input
+          id="search-input"
+          class="home-search__input"
+          type="text"
+          name="destination"
+          placeholder="Try: Paris, Tokyo, Costa Rica"
+        />
+        <button type="submit" class="home-search__button">Search</button>
+      </form>
+
+      <p class="home-search__note">
+        Tip: Don’t forget to check the full forecast on the
+        <a href="weather.html">Weather</a> page before you pack your bags.
+      </p>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -49,6 +75,6 @@
       navList.classList.toggle('nav__list--active');
     });
   </script>
-</body>
 
+</body>
 </html>
