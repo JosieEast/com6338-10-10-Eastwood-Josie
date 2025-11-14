@@ -53,3 +53,24 @@ form button {
   color: #fff;
   border: none;
 }
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
+
+  form {
+    flex-direction: column;
+  }
+
+  form input {
+    width: 90;
+  }
+
+@media (max-width: 600px) {
+  header a {
+    display: inline-block;
+    margin: 6px 8px;
+  }
+}
