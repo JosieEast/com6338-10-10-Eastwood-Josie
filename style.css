@@ -27,7 +27,7 @@ body {
 
 .header__title {
   font-family: 'Josefin Slab', serif;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   color: #ffffff;
 }
 .destinations {
@@ -153,7 +153,7 @@ body {
   display: flex;
   list-style: none;
   gap: 1rem;
-  font-size:1.4rem;
+  font-size:1rem;
 }
 
 .nav__link {
@@ -165,4 +165,118 @@ body {
 
 .nav__link:hover {
   color: #e63946;
+}
+
+/* Mobile nav toggle (hamburger button) */
+.nav__toggle {
+  display: none;              
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.0rem;
+  cursor: pointer;
+  margin-right: 0.75rem;
+}
+
+
+
+/*HOME PAGE CARD STYLES\*/
+.hero,
+.home-search {
+  background-color: #ffffff;
+  border-radius: 18px;
+  border: 2px solid #d2c4eb; /* light purple border */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  padding: 2rem 2.5rem;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+  border-radius: 14px;
+  background-color: #eae0f7; /* light lavender if image missing */
+}
+
+.hero__title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.hero__text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* SEARCH SECTION */
+.home-search {
+  margin-bottom: 2rem;
+}
+
+.home-search__title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem;
+}
+
+.home-search__text {
+  margin: 0 0 1.25rem;
+}
+
+.home-search__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.home-search__label {
+  font-weight: 600;
+}
+
+.home-search__input {
+  flex: 1 1 200px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #c9bddf;
+  font-size: 1rem;
+}
+
+.home-search__button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #a690daa8; 
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.home-search__button:hover {
+  background-color: #8e39d3; /* darker purple on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.home-search__note {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.home-search__note a {
+  color: #8e39d3;
+  font-weight: 600;
 }
