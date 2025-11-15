@@ -280,3 +280,51 @@ body {
   color: #8e39d3;
   font-weight: 600;
 }
+
+
+/* Image search result section */
+.search-result {
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 18px;
+  border: 2px solid #d2c4eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  padding: 2rem 2.5rem;
+  text-align: center;
+}
+
+.search-result__title {
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-result__hint {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.search-result__image-wrap img {
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+.search-result__error {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #e63946;
+}
+
+/* API Search Result Image */
+#image-result {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#image-result img {
+  width: 50%;        /* makes images half size */
+  max-width: 350px;  /* prevents huge images on big screens */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
