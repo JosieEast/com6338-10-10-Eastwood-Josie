@@ -73,7 +73,7 @@ body::before {
   color: #e63946;
 }
 
-/* Mobile nav toggle (if you add a burger later) */
+/* Mobile nav toggle (hamburger button) */
 .nav__toggle {
   display: none;
   background: none;
@@ -128,7 +128,7 @@ body::before {
   margin: 0 auto 1.5rem;
   object-fit: cover;
   border-radius: 14px;
-  background-color: #eae0f7; /* backup lavender if image missing */
+  background-color: #eae0f7; /* light lavender if image missing */
 }
 
 .hero__title {
@@ -191,7 +191,7 @@ body::before {
 }
 
 .home-search__button:hover {
-  background-color: #8e39d3;
+  background-color: #8e39d3; /* darker purple on hover */
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
 }
