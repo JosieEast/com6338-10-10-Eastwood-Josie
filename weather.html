@@ -3,40 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weather Checker</title>
-  <link rel="stylesheet" href="weather.css" />
+  <title>Weather</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Weather Checker</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="destinations.html">Popular Destinations</a>
-      <a href="weather.html">Weather Checker</a>
-    </nav>
+
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title">Vacation Weather Planner</h1>
+
+      <button class="nav__toggle">Menu</button>
+      <nav>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="popular.html">Popular Destinations</a></li>
+          <li><a class="nav__link" href="weather.html">Weather</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="main">
     <div class="app">
-      <section class="card">
-        <h2>Search Destination</h2>
-        <form id="search-form">
-          <input id="city-input" placeholder="Enter city (e.g. Paris)" required />
-          <button type="submit" class="btn">Get Weather</button>
+
+      <section class="home-search">
+        <h2 class="home-search__title">Search Destination</h2>
+
+        <form id="search-form" class="home-search__form">
+          <input
+            id="city-input"
+            class="home-search__input"
+            placeholder="Enter city (e.g. Paris)"
+            required
+          />
+          <button type="submit" class="home-search__button">Get Weather</button>
         </form>
 
-        <p id="status" class="muted">Know before you go! Be sure to pack and plan accordingly.</p>
+        <p id="status" class="home-search__note">
+          Know before you go! Be sure to pack and plan accordingly.
+        </p>
 
         <div id="result"></div>
       </section>
-      <aside class="card">
-        <h3>Recent Searches</h3>
+
+      <aside class="home-search">
+        <h3 style="font-family: 'Josefin Slab', serif; margin-bottom: 1rem;">
+          Recent Searches
+        </h3>
+
         <ul id="recent" class="recent-list"></ul>
 
-        <button id="clear-cache" class="small">Clear Searches</button>
+        <button id="clear-cache" class="home-search__button" style="margin-top: 1rem;">
+          Clear Searches
+        </button>
       </aside>
+
     </div>
   </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2025 Vacation Weather Planner | Built by our team</p>
+  </footer>
 
   <script src="weather.js"></script>
 </body>
