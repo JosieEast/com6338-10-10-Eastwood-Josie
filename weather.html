@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weather</title>
-
+  <title>Vacation Weather Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
   <header class="header">
     <div class="header__container">
       <h1 class="header__title">Vacation Weather Planner</h1>
 
-      <button class="nav__toggle">Menu</button>
+      <button class="nav__toggle" id="navToggle">Menu</button>
+
       <nav>
-        <ul class="nav__list">
+        <ul class="nav__list" id="navList">
           <li><a class="nav__link" href="index.html">Home</a></li>
           <li><a class="nav__link" href="popular.html">Popular Destinations</a></li>
           <li><a class="nav__link" href="weather.html">Weather</a></li>
@@ -25,8 +26,6 @@
   </header>
 
   <main class="main">
-    <div class="app">
-
       <section class="home-search">
         <h2 class="home-search__title">Search Destination</h2>
 
@@ -39,11 +38,9 @@
           />
           <button type="submit" class="home-search__button">Get Weather</button>
         </form>
-
         <p id="status" class="home-search__note">
           Know before you go! Be sure to pack and plan accordingly.
         </p>
-
         <div id="result"></div>
       </section>
 
@@ -51,21 +48,14 @@
         <h3 style="font-family: 'Josefin Slab', serif; margin-bottom: 1rem;">
           Recent Searches
         </h3>
-
         <ul id="recent" class="recent-list"></ul>
-
         <button id="clear-cache" class="home-search__button" style="margin-top: 1rem;">
           Clear Searches
         </button>
       </aside>
-
     </div>
   </main>
 
   <footer class="footer">
     <p class="footer__text">© 2025 Vacation Weather Planner | Built by our team</p>
   </footer>
-
-  <script src="weather.js"></script>
-</body>
-</html>
