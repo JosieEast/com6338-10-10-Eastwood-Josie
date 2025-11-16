@@ -27,6 +27,7 @@
 
   <main class="main">
 
+    <!-- HERO SECTION -->
     <section class="hero">
       <h2 class="hero__title">Plan Your Next Getaway</h2>
       <img src="images/destinationcollage.jpg" alt="Collage of popular travel destinations" class="hero__img">
@@ -43,6 +44,7 @@
         Start with a city or country you’re thinking about, then double-check the forecast before you book your trip.
       </p>
 
+      <!-- FORM -->
       <form id="destination-search" class="home-search__form">
         <label class="home-search__label" for="search-input">Destination</label>
         <input
@@ -54,20 +56,16 @@
         />
         <button type="submit" class="home-search__button">Search</button>
       </form>
-<div id="image-result"></div>
+
+      <!-- IMAGE RESULT INSIDE WHITE BOX -->
+      <h4 id="result-title" class="home-search__result-title"></h4>
+      <div id="search-result" class="home-search__result"></div>
+      <p id="search-error" class="home-search__error" aria-live="polite"></p>
 
       <p class="home-search__note">
-        Tip: Don’t forget to check the full forecast on the
+        Tip: Don’t forget to check the full forecast on the 
         <a href="weather.html">Weather</a> page before you pack your bags.
       </p>
-    </section>
-
-    <!-- IMAGE RESULT SECTION -->
-    <section class="search-result">
-      <h3 class="search-result__title">Destination Preview</h3>
-      <p class="search-result__hint">Search for a city or country to see a photo from that location.</p>
-      <div class="search-result__image-wrap" id="search-result"></div>
-      <p class="search-result__error" id="search-error" aria-live="polite"></p>
     </section>
 
   </main>
@@ -94,14 +92,16 @@
     const searchInput = document.getElementById("search-input");
     const searchResult = document.getElementById("search-result");
     const searchError = document.getElementById("search-error");
+    const resultTitle = document.getElementById("result-title");
 
-    if (searchForm && searchInput) {
+    if (searchForm) {
       searchForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         const destination = searchInput.value.trim();
         searchError.textContent = "";
         searchResult.innerHTML = "";
+        resultTitle.textContent = "";
 
         if (!destination) {
           searchError.textContent = "Please enter a destination.";
@@ -126,6 +126,7 @@
           img.src = photo.urls.regular;
           img.alt = photo.alt_description || destination;
 
+          resultTitle.textContent = `Image Result for "${destination}"`;
           searchResult.appendChild(img);
 
           // Save to localStorage (required by project)
@@ -138,7 +139,6 @@
       });
     }
   </script>
-<script src="script.js"></script>
 
 </body>
 </html>
