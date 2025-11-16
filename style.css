@@ -436,3 +436,32 @@ body::before {
   cursor: pointer;
   width: 100%;
 }
+
+/* RECENT SEARCH BUTTONS */
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-left: 0;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.recent-list .history-btn {
+  background-color: #fff;
+  color: #e63946;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.recent-list .history-btn:hover {
+  color: #fff;
+  background-color: #e63946;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
