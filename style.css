@@ -1,21 +1,44 @@
+/* ------------------ RESET ------------------ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ------------------ BODY + BACKGROUND IMAGE ------------------ */
 body {
+  background: url("images/vacation-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  background-color: #fefdf9;
   color: #333;
 }
 
-/* Header */
+/* Soft overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(1px);
+  z-index: -1;
+}
+
+/* Main stretches so footer sticks to bottom */
+.main {
+  flex: 1;
+}
+
+/* ------------------ HEADER ------------------ */
 .header {
-  background-color: #a690daa8;
+  background-color: #aba2e079;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header__container {
@@ -27,133 +50,16 @@ body {
 
 .header__title {
   font-family: 'Josefin Slab', serif;
-  font-size: 2.1rem;
+  font-size: 2rem;
   color: #ffffff;
 }
-.destinations {
-  background-color: #9c8fbba8;
-  padding: 2rem;
-  text-align: center;
-}
 
-.destinations__title {
-  font-size: 3rem;
-  font-family: 'Josefin Slab', serif;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.destinations__blurb {
-  max-width: 650px;
-  margin: 0 auto 1.5rem;
-  font-size:1.3rem;
-  color: #ffffff;
-  line-height: 1.5;
-}
-
-/* CTA button under blurb */
-.destinations__cta {
-  display: inline-block;
-  margin-bottom: 2rem;
-  padding: 0.75rem 1.25rem;
-  background-color: #8e39d3;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.2s ease;
-}
-
-.destinations__cta:hover {
-  background-color: #c72d39;
-}
-
-.destinations__grid {
-  display: grid;
-  gap: 4rem;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.destination-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 280px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.destination-card:hover {
-  transform: scale(1.05);
-}
-
-.destination-card__img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.destination-card__name {
-  font-size: 1.4rem;
-  color: #432ff7;
-  margin-top: 0.5rem;
-}
-
-.destination-card__desc {
-  font-size:1rem;
-  color: #555;
-}
-/* Make main take remaining space so footer sticks at bottom */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex: 1;
-}
-/* Footer */
-.footer {
-  background-color: #a690daa8;
-  padding: 1rem 2rem;
-  text-align: center;
-
-}
-
-.footer__text {
-  color: #1d3557;
-}
-/* Make sure the page takes full height */
-html, body {
-  height: 100%;
-}
-
-/* Make main take remaining space so footer sticks at bottom */
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex: 1;
-}
-
-/* Remove extra bottom margin in hero if any */
-.hero {
-  margin-bottom: 0;
-}
-.main {
-  flex: 1;
-  background-color: #75649cad;
-}
-/* Navigation */
+/* ------------------ NAVIGATION ------------------ */
 .nav__list {
   display: flex;
   list-style: none;
   gap: 1rem;
-  font-size:1rem;
+  font-size: 1.4rem;
 }
 
 .nav__link {
@@ -169,18 +75,35 @@ body {
 
 /* Mobile nav toggle (hamburger button) */
 .nav__toggle {
-  display: none;              
+  display: none;
   background: none;
   border: none;
   color: #ffffff;
-  font-size: 1.0rem;
+  font-size: 1rem;
   cursor: pointer;
   margin-right: 0.75rem;
 }
 
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    background-color: #d6c9f5a8;
+    width: 100%;
+    padding: 1rem;
+  }
 
+  .nav__list.nav__list--active {
+    display: flex;
+  }
 
-/*HOME PAGE CARD STYLES\*/
+  .nav__toggle {
+    display: block;
+  }
+}
+
+/* ------------------ HOME PAGE CARD STYLES ------------------ */
 .hero,
 .home-search {
   background-color: #ffffff;
@@ -193,7 +116,8 @@ body {
 /* HERO SECTION */
 .hero {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
+  max-width: 1500px;
 }
 
 .hero__img {
@@ -220,7 +144,8 @@ body {
 
 /* SEARCH SECTION */
 .home-search {
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 1500px;
 }
 
 .home-search__title {
@@ -257,7 +182,7 @@ body {
   padding: 0.6rem 1.4rem;
   border-radius: 12px;
   border: none;
-  background-color: #a690daa8; 
+  background-color: #a690daa8;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
@@ -327,4 +252,263 @@ body {
   max-width: 350px;  /* prevents huge images on big screens */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+/* ------------------ DESTINATIONS SECTION ------------------ */
+.destinations {
+  background-color: rgba(156, 143, 187, 0.6);
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1500px;
+}
+
+.destinations__title {
+  font-size: 3rem;
+  font-family: 'Josefin Slab', serif;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.destinations__blurb {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* CTA button */
+.destinations__cta {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #8e39d3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.destinations__cta:hover {
+  background-color: #6c1ea8;
+}
+
+/* Destination Grid */
+.destinations__grid {
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.destination-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-card__img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.destination-card__name {
+  font-size: 1.4rem;
+  color: #432ff7;
+  margin-top: 0.5rem;
+}
+
+.destination-card__desc {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Heart button on cards */
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #3b6bf7;       /* BLUE outline so it's visible before favorite */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.heart-btn.favorited {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* ------------------ FLIGHTS SECTION ------------------ */
+.flights {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 2rem auto;
+  max-width: 1500px;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.flights__title {
+  font-size: 2rem;
+  font-family: 'Josefin Slab', serif;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.flights__blurb {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.flights__results {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flights__loading,
+.flights__error {
+  text-align: center;
+  color: #444;
+}
+
+.flight-card {
+  background-color: #f8f7ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.flight-card__title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.flight-card__airport {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footer {
+  background-color: #a690daa8;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer__text {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ------------------ FAVORITES SIDEBAR ------------------ */
+
+/* Floating button */
+.floating-fav-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #8e39d3;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Sidebar container */
+.favorites-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px; /* Hidden offscreen */
+  width: 300px;
+  height: 100%;
+  background: rgba(255,255,255, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+/* When visible */
+.favorites-sidebar.active {
+  right: 0;
+}
+
+.favorites-sidebar h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Josefin Slab', serif;
+  color: #432ff7;
+}
+
+#favoritesList {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+}
+
+#favoritesList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Close button */
+.close-btn {
+  background: #8e39d3;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* RECENT SEARCH BUTTONS */
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-left: 0;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.recent-list .history-btn {
+  background-color: #fff;
+  color: #e63946;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.recent-list .history-btn:hover {
+  color: #fff;
+  background-color: #e63946;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
