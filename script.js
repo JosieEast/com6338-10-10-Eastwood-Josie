@@ -1,7 +1,6 @@
 // ---- Unsplash API image search ----
 
-// 1. Put your real Unsplash access key here
-const UNSPLASH_ACCESS_KEY = "YOUR_UNSPLASH_ACCESS_KEY_HERE";
+const UNSPLASH_ACCESS_KEY = "grlhFCXf2yuNuH0zRALAy7hwIh8K95wl3t-m-BRSy98";
 
 const searchForm = document.getElementById("destination-search");
 const searchInput = document.getElementById("search-input");
@@ -45,10 +44,14 @@ if (searchForm && searchInput && searchResult && searchError) {
       const img = document.createElement("img");
       img.src = photo.urls.regular;
       img.alt = photo.alt_description || `Photo of ${destination}`;
+      img.style.width = "100%";
+      img.style.maxWidth = "600px";
+      img.style.borderRadius = "12px";
+      img.style.marginTop = "1rem";
 
       searchResult.appendChild(img);
 
-      // (Optional) Save last search in localStorage for assignment requirement
+      // (Optional) Save last search in localStorage
       localStorage.setItem(
         "lastDestinationImage",
         JSON.stringify({
@@ -58,7 +61,8 @@ if (searchForm && searchInput && searchResult && searchError) {
       );
     } catch (error) {
       console.error(error);
-      searchError.textContent = "Something went wrong while loading the image. Please try again.";
+      searchError.textContent =
+        "Something went wrong while loading the image. Please try again.";
     }
   });
 }
